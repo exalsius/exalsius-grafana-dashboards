@@ -1,0 +1,8 @@
+# Default values for grafana-dashboards.
+# This chart provides Grafana dashboards (e.g. NVIDIA DCGM) with cluster-aware filtering.
+
+global:
+  # Prometheus label name used for cluster filtering in dashboards.
+  # DCGM (and other) panel queries are parameterized with this label (e.g. cluster=~"$cluster").
+  # Set to the label name your Prometheus uses for cluster (e.g. "cluster", "kubernetes_cluster").
+  clusterLabel: cluster
